@@ -17,9 +17,18 @@ export class CarsService {
   public async addCar(newCarData: NewCarInput): Promise<Car> {
     const newCar = this.carRepository.create(newCarData);
     await this.carRepository.save(newCar).catch((err) => {
-      new InternalServerErrorException();
+      throw new InternalServerErrorException();
     });
 
     return newCar;
+  }
+
+  public async deleteCar(id: string): Promise<Car> {
+    const carToDelete = await this.carRepository.findOneById(id);
+    if (!carToDelete) {
+      throw new Error(`Car with ID ${id} not found`);
+    }
+    await this.carRepository.remove(carToDelete);
+    return { ...carToDelete, id };
   }
 }

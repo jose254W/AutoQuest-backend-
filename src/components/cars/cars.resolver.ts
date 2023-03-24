@@ -7,18 +7,25 @@ import { Car } from './entities/car';
 export class CarsResolver {
   constructor(private carsService: CarsService) {}
 
-  @Query((returns) => [Car])
+  @Query(() => [Car])
   public async cars(): Promise<Car[]> {
     return await this.carsService.getAllCars().catch((err) => {
       throw err;
     });
   }
 
-  @Mutation((returns) => Car)
+  @Mutation(() => Car)
   public async addNewCar(
     @Args('newCarData') newCarData: NewCarInput,
   ): Promise<Car> {
     return await this.carsService.addCar(newCarData).catch((err) => {
+      throw err;
+    });
+  }
+
+  @Mutation(() => Car)
+  public async deleteCar(@Args('id') id: string): Promise<Car> {
+    return await this.carsService.deleteCar(id).catch((err) => {
       throw err;
     });
   }

@@ -6,6 +6,8 @@ import { DatabaseModule } from './database/database.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ComponentsModule } from './components/components.module';
+import { RentalController } from './controller/controller.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -19,7 +21,8 @@ import { ComponentsModule } from './components/components.module';
     }),
     ComponentsModule,
   ],
-  controllers: [AppController],
+
+  controllers: [AppController, RentalController],
   providers: [AppService],
 })
 export class AppModule {}
