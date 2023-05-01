@@ -11,7 +11,7 @@ export class RentalController {
       secure: false,
       auth: {
         user: 'josewawe75@gmail.com',
-        pass: 'pYUWQ9RF7jfmTwz3',
+        pass: 'NI0DO9E5chAVPbT1',
       },
     });
 
@@ -22,7 +22,7 @@ export class RentalController {
     const mailOptions = {
       from: 'josewawe75@gmail.com',
       to: 'mjdiners@gmail.com',
-      subject: 'AutoQuest Car BOOKING',
+      subject: 'AutoQuest Car Booking',
       text: formDataList,
     };
     try {

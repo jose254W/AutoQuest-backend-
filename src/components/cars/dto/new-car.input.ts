@@ -7,12 +7,12 @@ export class NewCarInput {
   name: string;
 
   @Field((type) => Int)
-  @Max(20000)
+  @Max(50000)
   @Min(1500)
   monthlyPrice: number;
 
   @Field((type) => Int)
-  @Max(1000)
+  @Max(10000)
   @Min(10, { message: "Daily price can't be that low!" })
   dailyPrice: number;
 
