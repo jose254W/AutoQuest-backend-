@@ -20,7 +20,7 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "postgres://postgres:12345678@192.168.1.100:5433/yourcar",
+    "url": "postgres://postgres:12345678@localhost:5432/yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "migrations": ["dist/migrations/*{.ts,.js}"],
