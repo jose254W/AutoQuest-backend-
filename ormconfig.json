@@ -20,8 +20,12 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "postgres://postgres:12345678@localhost:5432/yourcar",
-    "ssl": true,
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "12345678",
+    "database": "yourcar",
+    "ssl": false,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "migrations": ["dist/migrations/*{.ts,.js}"],
     "cli": {
