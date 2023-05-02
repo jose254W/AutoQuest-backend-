@@ -1,6 +1,6 @@
 [
   {
-    "name": "default",
+    "name": "dev",
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
@@ -20,7 +20,7 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "postgres://postgres:12345678@127.0.0.1:5432/yourcar",
+    "url": "postgres://postgres:12345678@localhost:5432/yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "migrations": ["dist/migrations/*{.ts,.js}"],
