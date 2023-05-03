@@ -20,14 +20,9 @@
   {
     "name": "prod",
     "type": "postgres",
-    "host": "127.0.0.1",
-    "port": 5432,
-    "username": "postgres",
-    "password": "123456789",
-    "database": "yourcar",
+    "url": "postgresql://postgres:K9mr8EMLVC6pre4XEh2F@containers-us-west-148.railway.app:6477/railway",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
-    "synchronize": false,
     "migrations": ["dist/migrations/*{.ts,.js}"],
     "cli": {
       "migrationsDir": "src/migrations"
@@ -35,5 +30,5 @@
     "extensions": {
       "uuid-ossp": true
     }
-  }  
+  }
 ]
