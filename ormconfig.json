@@ -20,9 +20,14 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "postgresql://postgres:K9mr8EMLVC6pre4XEh2F@containers-us-west-148.railway.app:6477/railway",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "123456789",
+    "database": "yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
+    "synchronize": false,
     "migrations": ["dist/migrations/*{.ts,.js}"],
     "cli": {
       "migrationsDir": "src/migrations"
