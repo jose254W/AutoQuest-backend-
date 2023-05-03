@@ -27,6 +27,7 @@
     "database": "yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
+    "synchronize": false,
     "migrations": ["dist/migrations/*{.ts,.js}"],
     "cli": {
       "migrationsDir": "src/migrations"
