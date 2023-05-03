@@ -20,7 +20,11 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "psql://postgres:123456789@127.0.0.1:5432/yourcar",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "username": "postgres",
+    "password": "123456789",
+    "database": "yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "migrations": ["dist/migrations/*{.ts,.js}"],
@@ -30,5 +34,5 @@
     "extensions": {
       "uuid-ossp": true
     }
-  }
+  }  
 ]
