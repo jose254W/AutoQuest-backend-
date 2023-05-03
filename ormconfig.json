@@ -5,7 +5,7 @@
     "host": "localhost",
     "port": 5432,
     "username": "postgres",
-    "password": "12345678",
+    "password": "123456789",
     "database": "yourcar",
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "synchronize": true,
@@ -20,7 +20,7 @@
   {
     "name": "prod",
     "type": "postgres",
-    "url": "postgres://postgres:12345678@127.0.0.1:5432/yourcar",
+    "url": "psql://postgres:123456789@127.0.0.1:5432/yourcar",
     "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "migrations": ["dist/migrations/*{.ts,.js}"],
