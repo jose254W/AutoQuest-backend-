@@ -30,7 +30,8 @@
     "synchronize": false,
     "migrations": ["dist/migrations/*{.ts,.js}"],
     "cli": {
-      "migrationsDir": "src/migrations"
+      "migrationsDir": "src/migrations",
+     "migrationsRun": true
     },
     "extensions": {
       "uuid-ossp": true
