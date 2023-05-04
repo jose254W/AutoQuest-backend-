@@ -9,7 +9,7 @@ COPY package.json .
 COPY yarn.lock .
 
 RUN yarn global add @nestjs/cli
-RUN yarn install --production=true
+RUN npm install --production=true
 
 RUN apt-get -q update && apt-get -qy install netcat
 
