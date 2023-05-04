@@ -15,6 +15,6 @@ RUN apt-get -q update && apt-get -qy install netcat
 
 COPY . .
 
-RUN yarn build 
+RUN npm build 
 
-CMD ["sh", "-c", "yarn typeorm migration:run && npm start:prod"]
+CMD ["sh", "-c", "npm typeorm migration:run && npm start:prod"]
