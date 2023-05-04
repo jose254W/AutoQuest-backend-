@@ -16,6 +16,25 @@
     "extensions": {
       "uuid-ossp": true
     }
+  },
+  {
+    "name": "prod",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "123456789",
+    "database": "yourcar",
+    "ssl": true,
+    "entities": ["dist/**/entities/*{.ts,.js}"],
+    "synchronize": false,
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "cli": {
+      "migrationsDir": "src/migrations",
+     "migrationsRun": true
+    },
+    "extensions": {
+      "uuid-ossp": true
+    }
   }
-  
 ]
