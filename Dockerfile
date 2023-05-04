@@ -17,4 +17,4 @@ COPY . .
 
 RUN yarn build 
 
-CMD ["sh", "-c", "yarn typeorm migration:run && yarn start:prod"]
+CMD ["sh", "-c", "yarn typeorm migration:run && npm start:prod"]
