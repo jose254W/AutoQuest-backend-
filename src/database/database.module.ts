@@ -10,6 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           await getConnectionOptions(
             process.env.NODE_ENV === 'production' ? 'prod' : 'dev',
           ),
+          { ssl: { rejectUnauthorized: false } }, // Add this line to disable SSL verification
         ),
     }),
   ],
