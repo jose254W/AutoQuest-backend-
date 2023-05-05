@@ -6,10 +6,11 @@ import { Car } from './entities/car';
 
 @Injectable()
 export class CarsService {
-  constructor(@InjectRepository(Car) private carRepository: Repository<Car>) {}
+  constructor(@InjectRepository(Car) private carRepository: Repository<Car>) { }
 
   public async getAllCars(): Promise<Car[]> {
     return await this.carRepository.find({}).catch((err) => {
+      console.log({ err });
       throw new InternalServerErrorException();
     });
   }
@@ -17,6 +18,7 @@ export class CarsService {
   public async addCar(newCarData: NewCarInput): Promise<Car> {
     const newCar = this.carRepository.create(newCarData);
     await this.carRepository.save(newCar).catch((err) => {
+      console.log({ err });
       throw new InternalServerErrorException();
     });
 
