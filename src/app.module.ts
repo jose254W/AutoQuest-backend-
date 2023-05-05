@@ -7,7 +7,6 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ComponentsModule } from './components/components.module';
 import { RentalController } from './controller/controller.module';
-import { InMemoryLRUCache } from 'apollo-server-caching';
 
 @Module({
   imports: [
@@ -19,14 +18,10 @@ import { InMemoryLRUCache } from 'apollo-server-caching';
       debug: true,
       autoSchemaFile: true,
       sortSchema: true,
-      persistedQueries: {
-        cache: new InMemoryLRUCache({
-          maxSize: 1000, // set a maximum size for the cache to avoid memory exhaustion attacks
-        }),
-      },
     }),
     ComponentsModule,
   ],
+
   controllers: [AppController, RentalController],
   providers: [AppService],
 })
