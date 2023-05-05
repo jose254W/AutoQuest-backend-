@@ -19,7 +19,7 @@ import { InMemoryLRUCache } from 'apollo-server-caching';
       debug: true,
       autoSchemaFile: true,
       sortSchema: true,
-      path: 'https://autoquest-backend-production.up.railway.app/graphql',
+      path: '/graphql',
       persistedQueries: {
         cache: new InMemoryLRUCache({
           maxSize: 1000, // set a maximum size for the cache to avoid memory exhaustion attacks
