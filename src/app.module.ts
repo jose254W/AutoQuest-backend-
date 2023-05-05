@@ -17,6 +17,7 @@ import { InMemoryLRUCache } from 'apollo-server-caching';
       driver: ApolloDriver,
       playground: true,
       debug: true,
+      cors: true,
       autoSchemaFile: true,
       sortSchema: true,
       persistedQueries: {
