@@ -9,7 +9,7 @@
     "database": "yourcar",
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "synchronize": true,
-    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrations": ["src/migrations/*.ts"],
     "cli": {
       "migrationsDir": "src/migrations"
     },
@@ -25,13 +25,12 @@
     "username": "postgres",
     "password": "Ab8n8fqA3IAfkcc2avbe",
     "database": "railway",
-    "ssl": false,
+    "ssl": true,
     "entities": ["dist/**/entities/*{.ts,.js}"],
     "synchronize": false,
-    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrations": ["dist/migrations/*.js"],
     "cli": {
-      "migrationsDir": "src/migrations",
-     "migrationsRun": true
+      "migrationsDir": "src/migrations"
     },
     "extensions": {
       "uuid-ossp": true

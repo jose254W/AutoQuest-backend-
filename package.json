@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "rimraf dist && tsc && cp ormconfig.json dist/ && cp .env dist/",
+    "build": "rimraf dist && tsc && cp ormconfig.json dist/ && cp .env dist/ && cp -r src/migrations dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "postinstall": "npm i -g @nestjs/cli",
@@ -19,7 +19,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "generate-schema": "graphql-schema --path=./src/**/*.graphql --output=./src/schema.gql"
+    "generate-schema": "graphql-schema --path=./src/**/*.graphql --output=./src/schema.gql",
+    "migration:create": "ts-node migration.ts"
   },
   "dependencies": {
     "@apollo/client": "^3.7.9",
